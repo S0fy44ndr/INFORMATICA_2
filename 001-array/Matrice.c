@@ -29,55 +29,71 @@ void caricaColrandom(int mat[][C],int r,int x); //Funzioni per le colonne
 void stampaCol(int mat[][C],int r,int x);
 int ricercaCol(int mat[][C],int r,int x,int y); 
 
-
-
+//Inizio programma
 int main()
-{int m[R][C],a, b, r;
-
-do {
-	r=menu();
-	switch (r)
-	{
-		case 0: printf ("Uscendo..");
-		    break;
-		case 1: carica_randmat(m,R,C);
-            break;
-        case 2: stampa(m,R,C);
-            break;
-        case 3: printf("Inserisci la riga su cui vuoi riordinare\n");
-                scanf("%d",&a);
-                ordconriga(m,a,C); 
-                stampa(m,R,C);
-            break;
-        case 4: printf("Inserisci la riga su cui vuoi ricercare l'elemento\n");
-                scanf("%d",&a);
-                printf("Inserisci il numero da cercare\n");
-                scanf("%d",&b);
-                r=ricerca(m[a],R,b);
-                printf("Nell'indice %d\n",r);
-            break;
-        case 5: r=mas(m,R,C);
-  	            printf("Il maggiore:%d\n",r);
-             	r=mini (m,R,C),
-                printf("Il minore:%d\n",r);
-            break;
-        case 6: printf("Inserisci la colonna su cui vuoi caricare la matrice\n");
-                scanf("%d",&a);
-                caricaColrandom(m,R,a);
-                stampa(m,R,C);
-            break;
-        case 7: printf("Inserisci la colonna che vuoi stampare\n");
+{
+	//Dichiarazione delle variabili. m=matrice, a/b per risultati delle funzioni, r=risultato
+	int m[R][C], a, b, r; 
+	
+	do {   
+		r=menu();
+		switch(r)   //Controllo scelta dell'utente
+		{
+			case 0: 
+				printf ("Uscendo..");    //Uscita dal ciclo
+			    break;
+			case 1: 
+				carica_randmat(m,R,C);   //Caricare random la matrice
+	            break;
+	        case 2: 
+				stampa(m,R,C);                   //Stampa della matrice
+	            break;
+	        case 3: 
+				printf("Inserisci la riga su cui vuoi riordinare\n");  //Riordinare una riga scelta dall'utente. Scelta riga da riordinare
+	            scanf("%d",&a);                               
+	            ordconriga(m,a,C);             
+	            stampa(m,R,C);                    //Stampa per controllare
+	            break;
+	        case 4: 
+				printf("Inserisci la riga su cui vuoi ricercare l'elemento\n");   //Scelta riga dove si cerca l'elemento
 	            scanf("%d",&a);
-	            stampaCol(m,R,a);
-	    case 8: printf("Inserisci la colonna dove effettuare la ricerca e il numero da cercare\n");
-	            scanf("%d%d",&a,&b);
-	            r=ricercaCol(m,R,a,b);
-	            printf("Il numero e' in posizione :%d\n",r);          
-	}
-}while (r!=0);
- //inserimento_ordinato(m,R);
+	            printf("Inserisci il numero da cercare\n");                       //Scelta dell'elemento da cercare
+	            scanf("%d",&b);
+	            r=ricerca(m[a],R,b);                                             //Funzione di ricerca
+	            printf("Nell'indice %d\n",r);                                    //Stampa dell'indice dove si trova il valore. se =-1 allora non c'è
+	            break;
+	        case 5: 
+				r=mas(m,R,C); 					//Massimo valore nella matrice
+	  	        printf("Il maggiore:%d\n",r);
+	            r=mini(m,R,C),   				//Minimo valore nella matrice
+	            printf("Il minore:%d\n",r);
+	            break;
+	        case 6: 
+				printf("Inserisci la colonna su cui vuoi caricare la matrice\n");  //Scelta colonna che verrà caricata
+	            scanf("%d",&a);
+	            caricaColrandom(m,R,a);
+	            stampa(m,R,C);
+	            break;
+	        case 7: 
+				printf("Inserisci la colonna che vuoi stampare\n");
+		        scanf("%d",&a);
+		        stampaCol(m,R,a);
+		        break;
+		    case 8: 
+				printf("Inserisci la colonna dove effettuare la ricerca e il numero da cercare\n");
+		        scanf("%d%d",&a,&b);
+		        r=ricercaCol(m,R,a,b);
+		        printf("Il numero e' in posizione :%d\n",r);          
+		        break;
+		    case 9: 
+				//inserimento_ordinato(m,R);
+		        break;
+		}
+	} while (r!=0);
+	
+	//fine programma
+	return 0;
 }
-
 
 int menu ()
 {
@@ -95,21 +111,27 @@ int menu ()
 	return a;
 }
 
+/*
+	Carichiamo la matrice mat con numeri random  
+*/
 void carica_randmat(int mat[][C], int righe, int colonne)
 {
 	int i;
-	for(i=0;i<colonne;i++)
+	for(i=0; i<colonne; i++) //scorrere tutte le colonne della matrice
 	{
-		carica_randvet(mat[i],colonne);
+		carica_randvet(mat[i], colonne);
     }
 }
 
+/* 
+	Carica random del vettore
+*/
 void carica_randvet(int vet[], int dim)
 {
 	int i;
 	for(i=0;i<dim;i++)
 	{
-		vet[i]=rand()%(max-min+1)+min;
+		vet[i]=rand()%(max-min+1)+min; //formula per inserire un certo numero rand
 	}
 }
 void stampa (int mat[][C],int r,int c)
