@@ -3,3 +3,24 @@
 *                Data                        *
 *                4^H                         *   
 *          Cosa sto facendo                 */
+
+//Dichiarazione librerie
+#include <stdio.h>   	//Libreria di input/output	
+#include <stdlib.h> /*Dichiara funzioni e costanti di utilità generale: 
+allocazione della memoria e controllo dei processi*/
+
+//Definizione costanti
+#define V 3 	    // V = numero di voti 
+#define S 50       //S = numero di caratteri per tutto 
+
+//Definizione struct
+
+//Definizione delle funzioni
+          //Funzione che carica record; parametri array di struct
+          /*Funzione che mette la prima lettera del cognome 
+                     in maiuscolo, mentre le restanti in minuscolo, 
+										 parametri: array di struct*/
+                     
+//Scrittura delle funzioni
+
+//Inizio programma
