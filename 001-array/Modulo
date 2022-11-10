@@ -1,17 +1,19 @@
 /*                                           *
 *            Andreeva Sofya                  *
-*                Data                        *
+*                10/11/2022                  *
 *                4^H                         *   
-*          Cosa sto facendo                 */
+*          Esercizi su struct                 */
 
-//Dichiarazione librerie
-#include <stdio.h>   	//Libreria di input/output	
-#include <stdlib.h> /*Dichiara funzioni e costanti di utilità generale: 
-allocazione della memoria e controllo dei processi*/
+//Dichiarazione librerie:
+//Libreria di input/output
+#include <stdio.h>  
+/*Dichiara funzioni e costanti di utilità generale: 
+allocazione della memoria e controllo dei processi*/ 		
+#include <stdlib.h>
 
 //Definizione costanti
-#define V 3 	    // V = numero di voti 
-#define S 50       //S = numero di caratteri per tutto 
+#define V 3 	    //V = 
+#define S 50        //S = 
 
 //Definizione struct
 
