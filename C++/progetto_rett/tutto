@@ -7,6 +7,7 @@
 * @author 		Andreeva Sofya
 * @date 		26/01/2023
 * @version 1.0 	26/01/2023 Versione iniziale
+* @version 1.1 	30/01/2023 Aggiunta di stampa
 */
 
 //Inclusione delle librerie
@@ -20,25 +21,14 @@ int main(int argc, char** argv) {
 	
 	//Creazione oggetto con costruttore con parametri 
 	Rettangolo rect1(2,4);
-	cout<<"Valori attesi: base=2; altezza=4"<<endl;	//Per testare
-	cout<<"L'altezza e' :"<<rect1.getAltezza()<<endl;
-	cout<<"La base e' :"<<rect1.getBase()<<endl;
-	cout<<"Il perimetro del primo e' : "<<rect1.calcolaPerimetro()<<endl;
-	cout<<"L'area del primo e' : "<<rect1.calcolaArea()<<endl;
-	cout<<"Il diametro del primo e' : "<<rect1.calcolaDiametro()<<endl;
-
+	rect1.stampa(2,4);
 	cout<<endl;
 	
 	//Creazione oggetto con costruttore senza parametri 
 	Rettangolo rect2;
 	rect2.setBase(12);
 	rect2.setAltezza(6);
-	cout<<"Valori attesi: base=12; altezza=6"<<endl;	//Per testare
-	cout<<"L'altezza e' :"<<rect2.getAltezza()<<endl;
-	cout<<"La base e' :"<<rect2.getBase()<<endl;
-	cout<<"Il perimetro del secondo e' : "<<rect2.calcolaPerimetro()<<endl;
-	cout<<"L'area del secondo e' : "<<rect2.calcolaArea()<<endl;
-	cout<<"Il diametro del secondo e' : "<<rect2.calcolaDiametro()<<endl;
+	rect2.stampa(12,6);
 	
 	return 0;
 }
@@ -60,13 +50,18 @@ public:
 	double calcolaArea();
 	double calcolaPerimetro();
 	double calcolaDiametro();
+	void stampa(double, double);
 };
 
 //descrizione
 
+//Inclusione delle librerie
 #include "Rettangolo.h"
 #include <math.h>
+#include <iostream>
 
+//per funzioni cin e cout
+using namespace std;
 
 Rettangolo::Rettangolo (){	
 	base=1;
@@ -104,4 +99,25 @@ double Rettangolo:: calcolaPerimetro(){
 
 double Rettangolo:: calcolaDiametro(){
   return (sqrt(pow(base,2)+pow(altezza,2)));
+}
+
+void Rettangolo :: stampa(double x, double y){
+	double a;
+	//Per testare
+	a=getBase();
+	cout<<"Valori attesi: base:"<<x<<endl;
+	a=getAltezza();
+	cout<<"Altezza:"<<y<<endl;
+	
+	a=getBase();
+	cout<<"Base:"<<a<<endl;
+	a=getAltezza();
+	cout<<"Altezza:"<<a<<endl;
+	a=calcolaPerimetro();
+	cout<<"Il perimetro e': "<<a<<endl;
+	a=calcolaArea();
+	cout<<"L'area e' : "<<a<<endl;
+	a=calcolaDiametro();
+	cout<<"Il diametro e' : "<<a<<endl;
+	cout<<endl;
 }
