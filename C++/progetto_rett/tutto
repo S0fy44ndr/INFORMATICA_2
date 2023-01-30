@@ -1,0 +1,107 @@
+//MAIN
+/******************************************************************************************
+* \mainpage		programmazione ad oggetti
+* @brief 		dichiarare la classe Rettangolo con attributi private: 
+* 				double base double altezza e si scrivano metodi public
+*
+* @author 		Andreeva Sofya
+* @date 		26/01/2023
+* @version 1.0 	26/01/2023 Versione iniziale
+*/
+
+//Inclusione delle librerie
+#include <iostream>
+#include "Rettangolo.h"
+
+//per funzioni cin e cout
+using namespace std;
+
+int main(int argc, char** argv) {
+	
+	//Creazione oggetto con costruttore con parametri 
+	Rettangolo rect1(2,4);
+	cout<<"Valori attesi: base=2; altezza=4"<<endl;	//Per testare
+	cout<<"L'altezza e' :"<<rect1.getAltezza()<<endl;
+	cout<<"La base e' :"<<rect1.getBase()<<endl;
+	cout<<"Il perimetro del primo e' : "<<rect1.calcolaPerimetro()<<endl;
+	cout<<"L'area del primo e' : "<<rect1.calcolaArea()<<endl;
+	cout<<"Il diametro del primo e' : "<<rect1.calcolaDiametro()<<endl;
+
+	cout<<endl;
+	
+	//Creazione oggetto con costruttore senza parametri 
+	Rettangolo rect2;
+	rect2.setBase(12);
+	rect2.setAltezza(6);
+	cout<<"Valori attesi: base=12; altezza=6"<<endl;	//Per testare
+	cout<<"L'altezza e' :"<<rect2.getAltezza()<<endl;
+	cout<<"La base e' :"<<rect2.getBase()<<endl;
+	cout<<"Il perimetro del secondo e' : "<<rect2.calcolaPerimetro()<<endl;
+	cout<<"L'area del secondo e' : "<<rect2.calcolaArea()<<endl;
+	cout<<"Il diametro del secondo e' : "<<rect2.calcolaDiametro()<<endl;
+	
+	return 0;
+}
+
+//file .h
+
+class Rettangolo{
+private:
+	double altezza;
+	double base;
+	
+public:
+	Rettangolo ();	
+	Rettangolo (double, double);
+	double getBase();
+	void setBase(double);
+	double getAltezza();
+	void setAltezza(double);
+	double calcolaArea();
+	double calcolaPerimetro();
+	double calcolaDiametro();
+};
+
+//descrizione
+
+#include "Rettangolo.h"
+#include <math.h>
+
+
+Rettangolo::Rettangolo (){	
+	base=1;
+	altezza=1;
+}
+		
+Rettangolo::Rettangolo (double b, double h){
+	altezza=h;
+	base=b;	
+}
+	
+double Rettangolo:: getBase(){
+	return base;
+}
+
+void Rettangolo:: setBase(double num){
+	base=num;	
+}
+
+double Rettangolo:: getAltezza(){
+	return altezza;
+}
+	
+void Rettangolo:: setAltezza(double num){
+	altezza=num;	
+}
+	
+double Rettangolo::calcolaArea(){
+	return (base*altezza);	
+}
+
+double Rettangolo:: calcolaPerimetro(){
+	return ((base+altezza)*2);	
+}
+
+double Rettangolo:: calcolaDiametro(){
+  return (sqrt(pow(base,2)+pow(altezza,2)));
+}
