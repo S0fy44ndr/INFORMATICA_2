@@ -1,0 +1,101 @@
+/******************************************************************************************
+* \mainpage		programmazione ad oggetti
+* @brief 		creazione programma contatore 
+*
+* @author 		Andreeva Sofya
+* @date 		02/02/2023
+* @version 1.0 	02/02/2023 Versione iniziale
+*/
+
+//Inclusione delle librerie
+#include <iostream>
+
+//per funzioni cin e cout
+using namespace std;
+
+//Creazione della classe
+class Contatore{
+	private:
+		//definizione degli attributi della classe
+		int valore;
+		int passo;
+	
+	public:
+		/*void setValore(int n){
+			valore=n;
+		}
+		void setPasso(int n){
+			valore=n;
+		}*/
+		Contatore ()
+		{
+			valore=1;
+			passo=1;
+		}
+		Contatore (int x)
+		{
+			valore=1;
+			passo=x;
+		}
+		Contatore (int x, int y)
+		{
+			valore=x;
+			passo=y;
+		}
+		void stampa()
+		{
+			cout<<"Il valore e'"<<valore<<endl;
+			cout<<"Il passo e'"<<passo<<endl;
+		}
+		void incrementa()
+		{
+			valore+=passo;
+		}
+
+};
+
+//Creazione della sottoclasse
+class ContatoreDoppio:public Contatore{
+	public:
+		//Chiamata del costruttore della superclasse 
+		ContatoreDoppio(int x):Contatore (x){};
+		//Ridefinizione del metodo incrementa
+		void incrementa(){
+			//Chiamata del metodo incrementa della classe base
+			Contatore::incrementa();
+			Contatore::incrementa();
+		}
+};
+
+int main ()
+{
+	cout<<"COSTRUTTORE SENZA PARAMETRI"<<endl;
+	Contatore c1;
+	c1.stampa();
+	c1.incrementa();
+	cout<<"DOPO AVER INCREMENTATO:"<<endl;
+	c1.stampa();
+
+	cout<<endl<<"COSTRUTTORE CON 1 PARAMETRO"<<endl;
+	Contatore c2(5);
+	c2.stampa();
+	c2.incrementa();
+	cout<<"DOPO AVER INCREMENTATO:"<<endl;
+	c2.stampa();
+	
+	cout<<endl<<"COSTRUTTORE CON 2 PARAMETRI"<<endl;
+	Contatore c3(5, 2);
+	c3.stampa();
+	c3.incrementa();
+	cout<<"DOPO AVER INCREMENTATO:"<<endl;
+	c3.stampa();
+	
+	
+	cout<<endl<<"CONTATORE DOPPIO"<<endl;
+	ContatoreDoppio cd1 (5);
+	cd1.stampa();
+	cd1.incrementa();
+	cout<<"DOPO AVER INCREMENTATO:"<<endl;
+	cd1.stampa();
+	return 0;
+}
