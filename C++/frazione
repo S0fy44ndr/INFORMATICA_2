@@ -1,0 +1,69 @@
+/** ****************************************************************************************
+* \mainpage			cpp_frazione
+*
+* @brief			Scrivere un programma con i metodi get e set,
+*					provare il metodo costruttore di default e stampare
+*					gli attributi 
+* @author			Andreeva Sofya
+* @date				12/1/2023 
+* @version 1.0		12/1/2023 Versione iniziale
+*/
+
+//Dichiarazione librerie:
+#include <iostream>
+#include <cstdlib>
+#include <iomanip>
+
+using namespace std;		//per funzioi cout e cin
+
+//Definisione di una classe
+class Frazione {
+	private:				//gli attributi possono essere utilizzati da certi metodi
+		//definizione degli attributi della classe
+		int numeratore;
+		int denominatore;
+	
+	public:
+	Frazione (){};			//costruttore di default
+	//Metodi setters
+	void setNumeratore (int n) {
+		numeratore = n;		
+	}
+	void setDenominatore (int n) {
+		denominatore = n;
+	}
+	//Metodi getters
+	int getNumeratore () {
+		return numeratore;
+	}
+	int getDenominatore () {
+		return denominatore;		
+	}
+	void stampa () {
+		cout<<"Il numeratore:"<< numeratore;
+		cout<< endl;
+		cout<<"Il denominatore:"<< denominatore;
+		cout<< endl;
+	}
+};
+
+int main ()
+{
+	Frazione f1;
+	Frazione f2;
+	int r;
+	f1.setNumeratore(7);
+	f1.setDenominatore(20);
+	f2.setNumeratore(10);
+	f2.setDenominatore(2);
+	r=f1.getNumeratore();
+	cout<<"E'stato inserito:"<< r<< endl;
+	r=f1.getDenominatore();
+	cout<<"E'stato inserito:"<< r<< endl;
+	r=f2.getNumeratore();
+	cout<<"E'stato inserito:"<< r<< endl;
+	r=f2.getDenominatore();
+	cout<<"E'stato inserito:"<< r<< endl;
+	f1.stampa();
+	f2.stampa();	
+}
