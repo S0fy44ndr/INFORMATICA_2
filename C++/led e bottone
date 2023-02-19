@@ -1,0 +1,102 @@
+// Classe LED 
+class LED { 
+  private: 
+   int pin; // Pin del LED 
+   int stato; 
+ 
+  public: 
+    // Costruttore: imposta la modalità del pin del LED come output 
+    LED(int p) { 
+      pin = p; 
+      pinMode(pin, OUTPUT); 
+    } 
+ 
+    // Metodo per accendere il LED 
+    void accendi() { 
+      digitalWrite(pin, HIGH); 
+      stato=HIGH; 
+    } 
+ 
+    // Metodo per spegnere il LED 
+    void spegni() { 
+      digitalWrite(pin, LOW); 
+      stato=LOW; 
+    } 
+  void inverti() {
+    if(stato==HIGH) 
+      spegni(); 
+    else 
+      accendi(); 
+   } 
+  void lampeggio(int nrLampeggi){ 
+    for(int i=0;i<nrLampeggi;i++){ 
+      spegni(); 
+      delay(200); 
+      inverti(); 
+      delay(200); 
+    } 
+    spegni();
+  } 
+  void test(int numeroTest){ 
+    if(numeroTest==0) {
+      accendi();
+    } else if(numeroTest==1) {
+      lampeggio(2);
+    } else if(numeroTest==2) {
+      lampeggio(5);
+    }
+  } 
+}; 
+
+// Classe PULSANTE 
+class PULSANTE { 
+  private: 
+    int pin;  
+    int stato; 
+  public: 
+    PULSANTE(int p) { 
+      pin = p; 
+      pinMode(pin, INPUT_PULLUP); 
+    } 
+  
+    int press() { 
+      return !digitalRead(pin); 
+    } 
+  	int click() { 
+      if(press()) { 
+        while(press()) ; 
+        return 1; 
+      } else { 
+        return 0;
+      }
+    } 
+}; 
+ 
+ 
+#define LED_ROSSO_PIN 12 
+#define LED_BLU_PIN 13 
+#define SW_PIN 2 
+// Crea un oggetto LED sulla porta 12 
+LED ledRosso(LED_ROSSO_PIN); 
+LED ledBlu(LED_BLU_PIN);
+PULSANTE button(SW_PIN); 
+ 
+//Inizializzazione  
+void setup() { 
+  ledRosso.test(1); 
+  ledBlu.test(2);
+} 
+
+void loop() { // Loop infinito 
+/*if(button.press()==0) 
+  { 
+    ledRosso.spegni(); 
+  } 
+  else 
+  { 
+    ledRosso.accendi(); 
+  }*/
+  if(button.click()) { 
+    ledBlu.inverti(); 
+  }
+}
