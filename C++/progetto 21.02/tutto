@@ -1,0 +1,20 @@
+//MAIN 
+#include <iostream>
+
+int main(int argc, char** argv) {
+	return 0;
+}
+
+//.H
+
+class PoligonoRegolare {
+	//Attributi privati
+	private:
+		int numeroLati;
+		double misuraLati;
+	
+	public:
+		PoligonoRegolare();
+		PoligonoRegolare(int);
+		
+};
