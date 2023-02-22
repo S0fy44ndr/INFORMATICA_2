@@ -1,20 +1,48 @@
 //MAIN 
+/******************************************************************************************
+* \mainpage		programmazione ad oggetti
+* @brief 		autovalutazione verifica 
+*
+* @author 		Andreeva Sofya
+* @date 		22/02/2023
+* @version 1.0 		22/02/2023 Versione iniziale
+*/
+
+//Inclusione delle librerie
 #include <iostream>
+
+//per funzioni cin e cout
+using namespace std;
 
 int main(int argc, char** argv) {
 	return 0;
 }
 
 //.H
-
+//Creazione della classe
 class PoligonoRegolare {
-	//Attributi privati
 	private:
-		int numeroLati;
-		double misuraLati;
-	
+		int NumeroLati;
+		double MisuraLati;
+	//Defenizione metodi
 	public:
 		PoligonoRegolare();
 		PoligonoRegolare(int);
-		
+		int getNumeroLati();
+		void setNumeroLati(double);
+		double getMisuraLati();
+		void setMisuraLati(double);
+		double Perimetro();
 };
+//Creazione della sottoclasse 1
+class TriangoloEquilatero:public PoligonoRegolare{
+	private: 
+		double Altezza;
+	//Defenizione metodi
+	public:
+		TriangoloEquilatero();
+		TriangoloEquilatero(int);
+		double AreaTriangolo;
+};
+//Creazione della sottoclasse 1
+class Rombo:public PoligonoRegolare
