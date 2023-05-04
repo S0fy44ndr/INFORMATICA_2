@@ -1,0 +1,40 @@
+/******************************************************************************************
+* \mainpage			C++, i puntatori
+* @brief
+*
+* @author 			Andreeva Sofya
+* @date 			04/05/2023
+* @version 1.0 		04/05/2023 - inizio programma, inserimentocarica, stampa e ricerca
+*/
+
+//Inclusione delle librerie utili
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+//Definizione delle costanti
+#define N 10
+
+//Defenizione delle funzioni
+int menu (void);
+void carica (int[]);
+void stampa (int[]);
+int *ricerca (int [], int);
+
+int main ()
+{
+	srand(time(NULL));
+	int vet[N], r, *punt; //vet= vettore, r= risposta, *punt= puntatore
+	carica (vet);
+	stampa (vet);
+	r=ricerca (vet, p);
+}
+
+void carica (int v [])
+{
+	int *p;
+	for (p=v; p-v<N; p++)
+	{
+		
+	}
+}
