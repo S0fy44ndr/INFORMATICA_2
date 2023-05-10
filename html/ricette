@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <title>Home</title>
 </head>
 
@@ -12,78 +13,81 @@
         Oggi racconterò della cucina di quel posto.</p>
     <a href="cibo1.html"> Dranniki </a>
     <br>
-    <img src="C:\Users\sofya.andreeva\Desktop\idi_nahui\file\dranniki.jpg" alt="foto dei dranniki">
+    <img src="../file/dranniki.jpg" alt="foto dei dranniki">
     <br>
     <a href="cibo2.html"> Jur </a>
     <br>
-    <img src="C:\Users\sofya.andreeva\Desktop\idi_nahui\file\jur.jpg" alt="foto dello Jur">
+    <img src="../file/jur.jpg" alt="foto dello Jur">
     <br>
     <a href="cibo3.html"> Krambambulia</a>
     <br>
-    <img src="C:\Users\sofya.andreeva\Desktop\idi_nahui\file\krambambulia.jpg" alt="foto diella Krambambulia">
+    <img src="../file/krambambulia.jpg" alt="foto diella Krambambulia">
 </body>
 
 </html>
-
 //CIBO1
 <html>
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <title>Dranniki</title>
 </head>
 
 <body>
-    <p>Indice</p>
-    <a href="index.html">Home</a><br>
-    <a href="cibo2.html"> Jur</a><br>
-    <a href="cibo3.html"> Krambambulia</a>
+    <h1>Dranniki</h1>
+
     <h2>Ingredienti</h2>
     <p> Per 4 porzioni, 45 minuti di preparazione</p>
-      </style>
-      <table class="center">
+    </style>
+    <table class="center">
 
-    <table>
-        <tbody>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Patate</th>
+                    <th>5 patate medie</th>
+                </tr>
+                <tr>
+                    <th>Cipolla</th>
+                    <th>½</th>
+                </tr>
+                <tr>
+                    <th>Uovo di gallina</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>Farina di frumento</th>
+                    <th>2 cucchiai</th>
+                </tr>
+                <tr>
+                    <th>Pepe macinato</th>
+                    <th>q.b.</th>
+                </tr>
+                <tr>
+                    <th>Sale</th>
+                    <th>q.b.</th>
+                </tr>
+            </tbody>
             <tr>
-                <th>Patate</th>
-                <th>5 patate medie</th>
-            </tr>
-            <tr>
-                <th>Cipolla</th>
-                <th>½</th>
-            </tr>
-            <tr>
-                <th>Uovo di gallina</th>
-                <th>1</th>
-            </tr>
-            <tr>
-                <th>Farina di frumento</th>
-                <th>2 cucchiai</th>
-            </tr>
-            <tr>
-                <th>Pepe macinato</th>
+                <th>Olio di girasole</th>
                 <th>q.b.</th>
             </tr>
-            <tr>
-                <th>Sale</th>
-                <th>q.b.</th>
-            </tr>
-        </tbody>
-        <tr>
-            <th>Olio di girasole</th>
-            <th>q.b.</th>
-        </tr>
-    </table>
-    <h2>Procedimento</h2>
-    <p>1. Pulire le patate, lavarle, e grattuggiarle sulla grattuggia, oppure utilizzare <br>
-        un frullatore. Nello stesso modo macinare la cipolla, per poi unirlo alle patate. <br>
-        IN questapoltiglia è bene aggiungere le spezie a la farina, e poi mischire finchè <br>
-        non diventa uniforme</p>
-    <p>2. Riscaldare l'olio nella padella. Con un cucchiaio prendere un po' della pasta <br>
-        e metterla nella padella in modo tale da farle sembrare dei cerchi.</p>
-    <p>3. I dranniki si cucinano su fuoco medio finchè non compare una crosta dorata, <br>
-        dopo questo si lasciano cucinare per tre minuti sotto il coperchio.</p>
-    <img src="C:\Users\sofya.andreeva\Desktop\idi_nahui\file\dranniki.jpg" alt="Dranniki">
+        </table>
+        <h2>Procedimento</h2>
+        <p>1. Pulire le patate, lavarle, e grattuggiarle sulla grattuggia, oppure utilizzare <br>
+            un frullatore. Nello stesso modo macinare la cipolla, per poi unirlo alle patate. <br>
+            IN questapoltiglia è bene aggiungere le spezie a la farina, e poi mischire finchè <br>
+            non diventa uniforme</p>
+        <p>2. Riscaldare l'olio nella padella. Con un cucchiaio prendere un po' della pasta <br>
+            e metterla nella padella in modo tale da farle sembrare dei cerchi.</p>
+        <p>3. I dranniki si cucinano su fuoco medio finchè non compare una crosta dorata, <br>
+            dopo questo si lasciano cucinare per tre minuti sotto il coperchio.</p>
+        <img src="../file/dranniki.jpg" alt="Dranniki">
+
+        <h2>Indice</h2>
+        <a href="index.html">Home</a><br>
+        <a href="cibo2.html"> Jur</a><br>
+        <a href="cibo3.html"> Krambambulia</a>
 </body>
 
 </html>
@@ -91,15 +95,13 @@
 <html>
 
 <head>
+    <link rel="stylesheet" href="style.css">
     <title>Jur</title>
 </head>
 
 <body>
-    <p>Indice</p>
-    <a href="index.html">Home</a><br>
-    <a href="cibo1.html"> Dranniki</a><br>
-    <a href="cibo3.html"> Krambambulia</a>
-    </ul>
+    <h1>Jur</h1>
+
     <h2>Ingredienti</h2>
     <p>Per una porzione</p>
     <table>
@@ -149,74 +151,177 @@
         e cucinare finchè no diventano teneri.</p>
     <p>4. Dopo aver lasciato raffreddare la zuppa, aggiungere 50 millilitri della <br>
         massa scolata fatta il giorno prima con fiocchi d'avena.</p>
-    <img src="C:\Users\sofya.andreeva\Desktop\idi_nahui\file\jur.jpg" alt="foto Jur">
+    <img src="../file/jur.jpg" alt="foto Jur">
+
+    <h2>Indice</h2>
+    <a href="index.html">Home</a><br>
+    <a href="cibo1.html"> Dranniki</a><br>
+    <a href="cibo3.html"> Krambambulia</a>
 </body>
 
 </html>
 //CIBO3
 <html>
-    <head>
-        <title>Krambambulia</title>
-    </head>
-    <body>
-        <p>Indice</p>
-        <a href="index.html">Home</a><br>
-        <a href="cibo1.html"> Dranniki</a><br>
-        <a href="cibo2.html"> Jur</a>
-        <h2>Ingredienti</h2>
-        <p> 1 litro di alcool, 40 gradi</p>
-        <table>
-            <tbody>
-                <tr>
-                    <th>Acqua</th>
-                    <th>250 ml</th>
-                </tr>
-                <tr>
-                    <th>Vodka</th>
-                    <th>½ litri</th>
-                </tr>
-                <tr>
-                    <th>Miele</th>
-                    <th>3 cucchiai</th>
-                </tr>
-                <tr>
-                    <th>Grano di pepe nero
-                    <th>3 pezzi</th>
-                </tr>
-                <tr>
-                    <th>Cannella</th>
-                    <th>1 bastoncino</th>
-                </tr>
-                <tr>
-                    <th>Chiodi di garofano</th>
-                    <th>3 pezzi</th>
-                </tr>
-                <tr>
-                    <th>Noce moscata</th>
-                    <th> ½ cucchiaio da the</th>
-                </tr>
-                <tr>
-                    <th>Pimento</th>
-                    <th> 3 </th>
-                </tr>
-        </table>
-        <h2>Procedimento</h2>
-        <p>25 gradi d'alcool, la data di scadenza è entro 5 anni. Da dare freddo</p>
-        <p>1. Pestare in un mortaio o macinare in un macinino da caffè noce moscata <br>
-            , chiodi di garofano e pimento.</p>
-        <p> 2. Versare acqua e 250 ml di vodka in una casseruola. Aggiungi le <br>
-            spezie tritate nella prima fase e un bastoncino di cannella. Mescolare.</p>
-        <p> 3. Portare a ebollizione a fuoco basso.</p>
-        <p> 4. Coprire con un coperchio, far bollire per 10 minuti.</p>
-        <p>5. Togliere la padella dal fuoco, raffreddare a 50-60°C, aggiungere <br>
-            la vodka (250 ml) e il miele, mescolare.</p>
-        <p> 6. Coprire con un coperchio, lasciare agire per 5 minuti.</p>
-        <p> 7. Filtrare il brodo attraverso 2-3 strati di garza, versare in <br>
-            un contenitore per infusione (vaso), aggiungere pepe nero, chiudere bene.</p>
-        <p> 8. Lasciare riposare per 8-10 giorni in un luogo buio a temperatura ambiente.</p>
-        <p> 9. Scolare il krambambulia fatto in casa finito dal sedimento <br>
-            attraverso un tubo in un contenitore, ad esempio una bottiglia, e chiuderlo bene.</p>
-        <img src="C:\Users\sofya.andreeva\Desktop\idi_nahui\file\krambambulia.jpg" alt="foto della krambambulia">
-    </body>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Krambambulia</title>
+</head>
+
+<body>
+    <h1>Krambambulia</h1>
+
+    <h2>Ingredienti</h2>
+    <table>
+        <tbody>
+            <tr>
+                <th>Acqua</th>
+                <th>250 ml</th>
+            </tr>
+            <tr>
+                <th>Vodka</th>
+                <th>½ litri</th>
+            </tr>
+        </tbody>
+        <tr>
+            <th>Miele</th>
+            <th>3 cucchiai</th>
+        </tr>
+        </tbody>
+        <tr>
+            <th>Grano di pepe nero
+            <th>3 pezzi</th>
+        </tr>
+        </tbody>
+        <tr>
+            <th>Cannella</th>
+            <th>1 bastoncino</th>
+        </tr>
+        </tbody>
+        <tr>
+            <th>Chiodi di garofano</th>
+            <th>3 pezzi</th>
+        </tr>
+        </tbody>
+        <tr>
+            <th>Noce moscata</th>
+            <th> ½ cucchiaio da the</th>
+        </tr>
+        </tbody>
+        <tr>
+            <th>Pimento</th>
+            <th> 3 </th>
+        </tr>
+    </table>
+    <h2>Procedimento</h2>
+    <p>25 gradi d'alcool, la data di scadenza è entro 5 anni. Da dare freddo</p>
+    <p>1. Pestare in un mortaio o macinare in un macinino da caffè noce moscata <br>
+        , chiodi di garofano e pimento.</p>
+    <p> 2. Versare acqua e 250 ml di vodka in una casseruola. Aggiungi le <br>
+        spezie tritate nella prima fase e un bastoncino di cannella. Mescolare.</p>
+    <p> 3. Portare a ebollizione a fuoco basso.</p>
+    <p> 4. Coprire con un coperchio, far bollire per 10 minuti.</p>
+    <p>5. Togliere la padella dal fuoco, raffreddare a 50-60°C, aggiungere <br>
+        la vodka (250 ml) e il miele, mescolare.</p>
+    <p> 6. Coprire con un coperchio, lasciare agire per 5 minuti.</p>
+    <p> 7. Filtrare il brodo attraverso 2-3 strati di garza, versare in <br>
+        un contenitore per infusione (vaso), aggiungere pepe nero, chiudere bene.</p>
+    <p> 8. Lasciare riposare per 8-10 giorni in un luogo buio a temperatura ambiente.</p>
+    <p> 9. Scolare il krambambulia fatto in casa finito dal sedimento <br>
+        attraverso un tubo in un contenitore, ad esempio una bottiglia, e chiuderlo bene.</p>
+    <img src="../file/krambambulia.jpg" alt="foto della krambambulia">
+
+    <h2>Indice</h2>
+    <a href="index.html">Home</a><br>
+    <a href="cibo1.html"> Dranniki</a><br>
+    <a href="cibo2.html"> Jur</a>
+</body>
 
 </html>
+
+//foglio di stile
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  h1, h2 {
+    color: #ffffff;
+  }
+  
+  table {
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+  }
+  
+  th {
+    background-color: #0a2b3e;
+    color: #ffffff;
+  }
+  
+  td {
+    background-color: #333333;
+    color: #ffffff;
+  }
+  
+  p {
+    margin: 10px 0;
+  }
+  
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }body {
+  font-family: Arial, sans-serif;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+h1, h2 {
+  color: #ffffff;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ffffff;
+}
+
+th {
+  background-color: #0a2b3e;
+  color: #ffffff;
+}
+
+td {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
