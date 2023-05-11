@@ -1,0 +1,32 @@
+/******************************************************************************************
+* \mainpage 		main.cpp
+* @brief 			Controllo degli esercizi svolti a casa 
+*
+* @author 			Andreeva Sofya
+* @date 			11/05/2023
+* @version 1.0 		11/05/2023
+*/
+
+#include <iostream>
+#include "coda.h"
+using namespace std;
+
+
+int main() {
+	int a;		//Variabile d'appoggio
+	bool r; 	//Variabile per metodi bool
+
+	//Creation Devastationw
+	cout<<"Inserisci lo spazio dedicato"<<endl;
+	cin>>a;
+	Coda a1 (a);
+	
+	//Push
+	r=a1.push();
+	if (r==false){
+		cout<<"No fra"<<endl;
+	} else {
+		cout<<"Ce l'abbiamo fatta fra!!!!!!!!"<<endl;
+	}
+	return 0;
+}
